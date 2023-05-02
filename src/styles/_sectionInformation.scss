@@ -1,0 +1,64 @@
+.about,
+.curiosity,
+.soundtrack {
+    padding: 5.6vw;
+    height: 100vh;
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        margin-bottom: 56px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        margin-bottom: 64px;
+    }
+
+    &__content {
+
+        display: flex;
+        align-items: center;
+
+        @media (min-width: 360px) and (max-width: 767px) {
+            display: block;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            display: block;
+            text-align: center;
+        }
+
+        &__image {
+            height: 450px;
+            margin-right: 32px;
+            transition: all 0.4s ease;
+
+            @media (min-width: 360px) and (max-width: 767px) {
+                max-width: 300px;
+                height: 230px;
+                margin: 0;
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                margin: 0;
+            } 
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &--margin-left {
+                margin-left: 50px;
+
+                @media (max-width: 768px) {
+                    margin: 0;
+                }
+
+            }
+
+        }
+
+        &__description:first-child {
+            margin-bottom: 24px;
+        }
+    }
+}

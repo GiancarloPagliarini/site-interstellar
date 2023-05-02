@@ -1,0 +1,98 @@
+@use './config/variables';
+
+.characters {
+    padding: 5.6vw;
+    
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        
+        gap: 32px;
+        padding-top: 32px;
+        
+        list-style: none;
+
+        @media (min-width: 360px) and (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        @media (min-width: 1024px) and (max-width: 1700px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            padding: 26px;
+            background-color: variables.$colorsCard;
+            border-radius: 9px;
+            text-align: center;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            @media (min-width: 1024px) and (max-width: 1700px) {
+                width: 50%;
+            }
+
+            &--cooper:hover {
+                background-color: #143338;
+
+                .characters__list__item__real-name {
+                    color: #000;
+                }
+            }
+
+            &--amelia:hover {
+                background-color: #927243;
+
+                .characters__list__item__real-name {
+                    color: #000;
+                }
+            }
+
+            &--murphy:hover {
+                background-color: #2e3e31;
+
+                .characters__list__item__real-name {
+                    color: #000;
+                }
+                
+            }
+
+            &--mann:hover {
+                background-color: #7f3124;
+
+                .characters__list__item__real-name {
+                    color: #000;
+                }
+            }
+
+            &__name {
+                color: #fff;
+                border-bottom: 2px solid #fff;
+            }
+
+            &__real-name {
+                color: variables.$colorCardRealName;
+                transition: all 0.2s ease;
+            }
+
+            &__image {
+                width: 100%;
+                height: 400px;
+                margin-bottom: 12px;
+                border-radius: 4px;
+
+                @media (min-width: 500px) {
+                    width: auto;
+                }
+            }
+        }
+    }
+}

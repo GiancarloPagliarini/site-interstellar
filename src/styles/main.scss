@@ -1,0 +1,74 @@
+@use './config/reset';
+@use './config/variables';
+@use './logo';
+@use 'sectionInformation';
+@use './characters';
+
+@mixin text($fontSize: 20px) {
+    font-size: $fontSize;
+    color: variables.$colorText;
+    font-weight: 200;
+}
+
+@mixin title($fontSize: 24px) {
+    font-size: $fontSize;
+    color: variables.$colorTitle;
+    border-bottom: 2px solid #fff;
+}
+
+body {
+    background-image: url('../../dist/images/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.rocket {
+    position: fixed;
+    height: 150px;
+    right: 0;
+    transition: all 1s ease;
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        height: 100px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        height: 120px;
+    }
+
+    &--is-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.text {
+    @include text;
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        @include text(16px);
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @include text(18px);
+    }
+}
+
+.title {
+    @include title;
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        @include title(18px);
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @include title(20px);
+    }
+}
+
+.line-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+}

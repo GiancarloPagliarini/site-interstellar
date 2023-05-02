@@ -1,0 +1,22 @@
+.logo-interstellar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 5.6vw;
+    
+    width: 100vw;
+    height: 100vh;
+
+    @media (min-width: 360px) and (max-width: 767px) {
+        margin-bottom: 56px;
+    }
+
+    &__item {
+        width: 100%;
+        opacity: 0;
+        transform: scale(1);
+        transition: all 5s ease-in-out;
+    }
+
+}
